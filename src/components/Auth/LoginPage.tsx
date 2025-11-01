@@ -51,14 +51,14 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-accent-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
         <div className="text-center mb-8">
-          <div className="inline-block p-3 bg-blue-100 rounded-full mb-4">
-            <Mail className="w-8 h-8 text-blue-600" />
+          <div className="inline-block p-3 bg-accent-100 rounded-full mb-4">
+            <Mail className="w-8 h-8 text-accent-600" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Laundry</h1>
-          <p className="text-gray-600">Your convenient laundry service</p>
+          <h1 className="text-3xl font-bold text-primary-700 mb-2">Joyful</h1>
+          <p className="text-gray-600">Laundry Day Just Got Joyful</p>
         </div>
 
         {error && (
@@ -77,7 +77,7 @@ export const LoginPage = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 placeholder="John Doe"
                 required={isSignUp}
               />
@@ -94,7 +94,7 @@ export const LoginPage = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 placeholder="you@example.com"
                 required
               />
@@ -111,7 +111,7 @@ export const LoginPage = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 placeholder="••••••••"
                 required
               />
@@ -121,7 +121,7 @@ export const LoginPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-primary-600 text-white py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Please wait...' : isSignUp ? 'Sign Up' : 'Sign In'}
           </button>
@@ -152,7 +152,7 @@ export const LoginPage = () => {
               setIsSignUp(!isSignUp);
               setError('');
             }}
-            className="text-blue-600 font-medium hover:underline"
+            className="text-primary-600 font-medium hover:underline"
           >
             {isSignUp ? 'Sign In' : 'Sign Up'}
           </button>

@@ -81,7 +81,7 @@ export const TimeSlotPicker = ({ selectedSlot, onSelectSlot, label }: TimeSlotPi
               onClick={() => setSelectedDate(date)}
               className={`px-4 py-2 rounded-lg whitespace-nowrap font-medium transition-all ${
                 selectedDate === date
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-primary-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -104,7 +104,7 @@ export const TimeSlotPicker = ({ selectedSlot, onSelectSlot, label }: TimeSlotPi
               disabled={!slot.available}
               className={`p-3 rounded-lg font-medium transition-all ${
                 selectedSlot?.id === slot.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-primary-600 text-white'
                   : slot.available
                   ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   : 'bg-gray-50 text-gray-400 cursor-not-allowed'
@@ -117,8 +117,8 @@ export const TimeSlotPicker = ({ selectedSlot, onSelectSlot, label }: TimeSlotPi
       </div>
 
       {selectedSlot && (
-        <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-          <p className="text-sm text-blue-800">
+        <div className="mt-4 p-3 bg-primary-50 rounded-lg">
+          <p className="text-sm text-primary-800">
             Selected: {formatDate(selectedSlot.date)} at {selectedSlot.time}
           </p>
         </div>

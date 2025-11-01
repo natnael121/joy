@@ -12,9 +12,9 @@ const getStatusColor = (status: Order['status']) => {
     case 'cancelled':
       return 'bg-red-100 text-red-800';
     case 'delivering':
-      return 'bg-blue-100 text-blue-800';
+      return 'bg-primary-100 text-primary-800';
     case 'washing':
-      return 'bg-yellow-100 text-yellow-800';
+      return 'bg-accent-100 text-accent-800';
     case 'picked':
       return 'bg-cyan-100 text-cyan-800';
     case 'pending':
@@ -80,7 +80,7 @@ export const OrderHistory = ({ orders }: OrderHistoryProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t">
               <div>
                 <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-blue-600 mt-1" />
+                  <MapPin className="w-4 h-4 text-primary-600 mt-1" />
                   <div>
                     <p className="text-sm font-medium text-gray-900">Pickup</p>
                     <p className="text-sm text-gray-600">{order.pickupAddress.label}</p>
@@ -111,7 +111,7 @@ export const OrderHistory = ({ orders }: OrderHistoryProps) => {
                 {order.services.map((service) => (
                   <span
                     key={service}
-                    className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm"
+                    className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm"
                   >
                     {service.charAt(0).toUpperCase() + service.slice(1).replace('-', ' ')}
                   </span>

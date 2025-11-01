@@ -65,14 +65,14 @@ export const ServiceSelector = ({
               onClick={() => onToggleService(service.id)}
               className={`p-4 rounded-lg border-2 text-left transition-all ${
                 isSelected
-                  ? 'border-blue-500 bg-blue-50'
-                  : 'border-gray-200 hover:border-blue-300'
+                  ? 'border-primary-500 bg-primary-50'
+                  : 'border-gray-200 hover:border-primary-300'
               }`}
             >
               <div className="flex items-start gap-3">
                 <div
                   className={`p-2 rounded-lg ${
-                    isSelected ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'
+                    isSelected ? 'bg-primary-600 text-white' : 'bg-gray-100 text-gray-600'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -83,7 +83,7 @@ export const ServiceSelector = ({
                       <p className="font-medium text-gray-900">{service.name}</p>
                       <p className="text-sm text-gray-600 mt-1">{service.description}</p>
                     </div>
-                    <p className="font-semibold text-blue-600">${service.price}</p>
+                    <p className="font-semibold text-accent-600">${service.price}</p>
                   </div>
                 </div>
               </div>

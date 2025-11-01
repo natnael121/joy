@@ -21,7 +21,7 @@ export const AddressSelector = ({
         <h3 className="font-semibold text-gray-900">Select Address</h3>
         <button
           onClick={onAddNew}
-          className="flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
+          className="flex items-center gap-1 text-primary-600 hover:text-primary-700 text-sm font-medium"
         >
           <Plus className="w-4 h-4" />
           Add New
@@ -35,12 +35,12 @@ export const AddressSelector = ({
             onClick={() => onSelect(address)}
             className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
               selectedAddress?.id === address.id
-                ? 'border-blue-500 bg-blue-50'
-                : 'border-gray-200 hover:border-blue-300'
+                ? 'border-primary-500 bg-primary-50'
+                : 'border-gray-200 hover:border-primary-300'
             }`}
           >
             <div className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-blue-600 mt-0.5" />
+              <MapPin className="w-5 h-5 text-primary-600 mt-0.5" />
               <div className="flex-1">
                 <p className="font-medium text-gray-900">{address.label}</p>
                 <p className="text-sm text-gray-600 mt-1">
@@ -117,7 +117,7 @@ export const AddressForm = ({ onSave, onCancel }: AddressFormProps) => {
           type="button"
           onClick={getCurrentLocation}
           disabled={gettingLocation}
-          className="flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium disabled:opacity-50"
+          className="flex items-center gap-1 text-accent-600 hover:text-accent-700 text-sm font-medium disabled:opacity-50"
         >
           <Navigation className="w-4 h-4" />
           {gettingLocation ? 'Getting...' : 'Use GPS'}
@@ -132,7 +132,7 @@ export const AddressForm = ({ onSave, onCancel }: AddressFormProps) => {
           type="text"
           value={label}
           onChange={(e) => setLabel(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           placeholder="Home"
           required
         />
@@ -146,7 +146,7 @@ export const AddressForm = ({ onSave, onCancel }: AddressFormProps) => {
           type="text"
           value={street}
           onChange={(e) => setStreet(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           placeholder="123 Main St"
           required
         />
@@ -161,7 +161,7 @@ export const AddressForm = ({ onSave, onCancel }: AddressFormProps) => {
             type="text"
             value={city}
             onChange={(e) => setCity(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             placeholder="New York"
             required
           />
@@ -175,7 +175,7 @@ export const AddressForm = ({ onSave, onCancel }: AddressFormProps) => {
             type="text"
             value={state}
             onChange={(e) => setState(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             placeholder="NY"
             required
           />
@@ -190,7 +190,7 @@ export const AddressForm = ({ onSave, onCancel }: AddressFormProps) => {
           type="text"
           value={zipCode}
           onChange={(e) => setZipCode(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           placeholder="10001"
           required
         />
@@ -206,7 +206,7 @@ export const AddressForm = ({ onSave, onCancel }: AddressFormProps) => {
         </button>
         <button
           type="submit"
-          className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+          className="flex-1 px-4 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
         >
           Save Address
         </button>

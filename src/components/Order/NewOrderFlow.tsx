@@ -47,6 +47,7 @@ export const NewOrderFlow = ({
     }
 
     setShowAddressForm(false);
+    handleNext();
   };
 
   const handleNext = () => {
@@ -238,7 +239,7 @@ export const NewOrderFlow = ({
                 key={step}
                 className={`flex-1 h-1 rounded ${
                   ['pickup', 'delivery', 'services', 'pickup-time', 'delivery-time', 'review'].indexOf(currentStep) >= index
-                    ? 'bg-blue-600'
+                    ? 'bg-primary-600'
                     : 'bg-gray-200'
                 }`}
               />
@@ -264,7 +265,7 @@ export const NewOrderFlow = ({
               <button
                 onClick={handleNext}
                 disabled={!canProceed()}
-                className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Next
                 <ArrowRight className="w-5 h-5" />
@@ -272,7 +273,7 @@ export const NewOrderFlow = ({
             ) : (
               <button
                 onClick={handleComplete}
-                className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
+                className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-accent-600 text-white rounded-lg font-medium hover:bg-accent-700 transition-colors"
               >
                 <CheckCircle className="w-5 h-5" />
                 Complete Order

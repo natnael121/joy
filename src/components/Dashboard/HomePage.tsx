@@ -111,7 +111,7 @@ export const HomePage = () => {
     if (loading) {
       return (
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
         </div>
       );
     }
@@ -145,8 +145,8 @@ export const HomePage = () => {
                       className="w-20 h-20 rounded-full"
                     />
                   ) : (
-                    <div className="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center">
-                      <User className="w-10 h-10 text-blue-600" />
+                    <div className="w-20 h-20 rounded-full bg-accent-100 flex items-center justify-center">
+                      <User className="w-10 h-10 text-accent-600" />
                     </div>
                   )}
                   <div>
@@ -184,9 +184,9 @@ export const HomePage = () => {
       default:
         return (
           <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg shadow-lg p-8 text-white">
+            <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-lg shadow-lg p-8 text-white">
               <h1 className="text-3xl font-bold mb-2">Welcome, {currentUser?.name}!</h1>
-              <p className="text-blue-100">Your laundry, delivered fresh and clean</p>
+              <p className="text-primary-100">Your laundry, delivered fresh and clean</p>
             </div>
 
             {activeOrder && (
@@ -201,8 +201,8 @@ export const HomePage = () => {
                 onClick={() => setCurrentView('new-order')}
                 className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow text-left group"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
-                  <Plus className="w-6 h-6 text-blue-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent-600 transition-colors">
+                  <Plus className="w-6 h-6 text-accent-600 group-hover:text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">New Order</h3>
                 <p className="text-gray-600 text-sm">Schedule a new pickup</p>
@@ -212,8 +212,8 @@ export const HomePage = () => {
                 onClick={() => setCurrentView('orders')}
                 className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow text-left group"
               >
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600 transition-colors">
-                  <Package className="w-6 h-6 text-green-600 group-hover:text-white" />
+                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-600 transition-colors">
+                  <Package className="w-6 h-6 text-primary-600 group-hover:text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">My Orders</h3>
                 <p className="text-gray-600 text-sm">View order history</p>
@@ -231,9 +231,9 @@ export const HomePage = () => {
           <div className="flex justify-between items-center h-16">
             <button
               onClick={() => setCurrentView('home')}
-              className="text-xl font-bold text-blue-600"
+              className="text-xl font-bold text-primary-700"
             >
-              Laundry
+              Joyful
             </button>
 
             <div className="flex items-center gap-4">
@@ -241,7 +241,7 @@ export const HomePage = () => {
                 onClick={() => setCurrentView('home')}
                 className={`px-3 py-2 rounded-lg font-medium transition-colors ${
                   currentView === 'home'
-                    ? 'bg-blue-100 text-blue-600'
+                    ? 'bg-primary-100 text-primary-700'
                     : 'text-gray-600 hover:bg-gray-100'
                 }`}
               >
@@ -251,7 +251,7 @@ export const HomePage = () => {
                 onClick={() => setCurrentView('orders')}
                 className={`px-3 py-2 rounded-lg font-medium transition-colors ${
                   currentView === 'orders'
-                    ? 'bg-blue-100 text-blue-600'
+                    ? 'bg-primary-100 text-primary-700'
                     : 'text-gray-600 hover:bg-gray-100'
                 }`}
               >
@@ -261,7 +261,7 @@ export const HomePage = () => {
                 onClick={() => setCurrentView('profile')}
                 className={`p-2 rounded-lg transition-colors ${
                   currentView === 'profile'
-                    ? 'bg-blue-100 text-blue-600'
+                    ? 'bg-primary-100 text-primary-700'
                     : 'text-gray-600 hover:bg-gray-100'
                 }`}
               >

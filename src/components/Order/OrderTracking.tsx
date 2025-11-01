@@ -43,7 +43,7 @@ export const OrderTracking = ({ order }: OrderTrackingProps) => {
       <div className="relative">
         <div className="absolute top-8 left-8 right-8 h-0.5 bg-gray-200">
           <div
-            className="h-full bg-blue-600 transition-all duration-500"
+            className="h-full bg-primary-600 transition-all duration-500"
             style={{
               width: `${currentIndex >= 0 ? (currentIndex / (statusSteps.length - 1)) * 100 : 0}%`
             }}
@@ -61,9 +61,9 @@ export const OrderTracking = ({ order }: OrderTrackingProps) => {
                 <div
                   className={`w-16 h-16 rounded-full flex items-center justify-center transition-all ${
                     isCompleted
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-primary-600 text-white'
                       : 'bg-gray-100 text-gray-400'
-                  } ${isCurrent ? 'ring-4 ring-blue-200' : ''}`}
+                  } ${isCurrent ? 'ring-4 ring-primary-200' : ''}`}
                 >
                   <Icon className="w-8 h-8" />
                 </div>
@@ -88,7 +88,7 @@ export const OrderTracking = ({ order }: OrderTrackingProps) => {
           </div>
           <div>
             <p className="text-gray-600">Status</p>
-            <p className="font-medium text-blue-600 capitalize">{order.status}</p>
+            <p className="font-medium text-primary-600 capitalize">{order.status}</p>
           </div>
           <div>
             <p className="text-gray-600">Pickup Address</p>
